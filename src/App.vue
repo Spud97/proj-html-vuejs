@@ -7,18 +7,18 @@
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
-import TheFooter from './components/TheFooter.vue'
-import TheMain from './components/TheMain.vue'
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
+import TheMain from "./components/TheMain.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TheHeader,
     TheFooter,
-    TheMain
-}
-}
+    TheMain,
+  },
+};
 </script>
 
 <style lang="scss">

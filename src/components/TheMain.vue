@@ -3,6 +3,7 @@
     <JumboSection></JumboSection>
     <EnrollSection></EnrollSection>
     <WelcomeSection></WelcomeSection>
+    <CarouselSection></CarouselSection>
   </div>
 </template>
 
@@ -10,9 +11,10 @@
 import JumboSection from "./JumboSection.vue";
 import EnrollSection from "./EnrollSection.vue";
 import WelcomeSection from "./WelcomeSection.vue";
+import CarouselSection from "./CarouselSection.vue";
 export default {
   name: "TheMain",
-  components: { JumboSection, EnrollSection, WelcomeSection },
+  components: { JumboSection, EnrollSection, WelcomeSection, CarouselSection },
 };
 </script>
 

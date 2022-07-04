@@ -8,10 +8,10 @@
         <div
           v-for="link in linkList"
           :key="link.id"
-          class="text-center d-flex flex-column justify-content-center align-items-center pointer"
+          class="text-center d-flex flex-column justify-content-center align-items-center pointer px-1"
           :class="{ activeLink: link.active == true }"
         >
-          <img :src="`../../images${link.icon}`" alt="icon" class="icon-header my-2">
+          <img :src="`../../images${link.icon}`" alt="icon" class="icon-header my-2 mx-4">
           <span class="icon-padding">{{ link.name }}</span>
         </div>
       </div>
@@ -99,7 +99,7 @@ span {
   width: 1.5rem;
 }
 .icon-padding {
-  padding: 5px 20px 10px 20px;
+  padding: 5px 0px 10px 0px;
 }
 .pointer {
   cursor: pointer;
