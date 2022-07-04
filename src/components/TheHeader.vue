@@ -2,17 +2,17 @@
   <div>
     <div class="container padd d-flex justify-content-between">
       <div>
-        <img src="../../public/images/logo.png" alt="logo-header" />
+        <img id="logo" src="../../public/images/logo.png" alt="logo-header" />
       </div>
       <div class="d-flex align-items-center text-blue">
         <div
           v-for="link in linkList"
           :key="link.id"
-          class="text-center d-flex flex-column justify-content-center"
+          class="text-center d-flex flex-column justify-content-center align-items-center pointer"
           :class="{ activeLink: link.active == true }"
         >
-          <i :class="link.icon" class="pb-2 p-link"></i>
-          <span class="pt-1">{{ link.name }}</span>
+          <img :src="`../../images${link.icon}`" alt="icon" class="icon-header my-2">
+          <span class="icon-padding">{{ link.name }}</span>
         </div>
       </div>
     </div>
@@ -27,43 +27,43 @@ export default {
       linkList: [
         {
           name: "Home",
-          icon: "fa-solid fa-house",
+          icon: "/home-2.png",
           id: 0,
           active: true,
         },
         {
           name: "Pages",
-          icon: "fa-solid fa-file-lines",
+          icon: "/document.png",
           id: 1,
           active: false,
         },
         {
           name: "Blog",
-          icon: "fa-solid fa-file-invoice",
+          icon: "/printer.png",
           id: 2,
           active: false,
         },
         {
           name: "Shop",
-          icon: "fa-solid fa-cart-shopping",
+          icon: "/cart.png",
           id: 3,
           active: false,
         },
         {
           name: "Shortcodes",
-          icon: "fa-solid fa-flask",
+          icon: "/lab.png",
           id: 4,
           active: false,
         },
         {
           name: "Support",
-          icon: "fa-solid fa-message",
+          icon: "/chat.png",
           id: 5,
           active: false,
         },
         {
           name: "Contact",
-          icon: "fa-solid fa-envelope",
+          icon: "/envelope.png",
           id: 6,
           active: false,
         },
@@ -74,14 +74,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-img {
-  height: 6rem;
-}
 i {
   font-size: 1.5rem;
 }
 span {
   font-size: 0.8rem;
+}
+#logo {
+  height: 6rem;
 }
 .padd {
   padding: 0px 250px;
@@ -89,12 +89,19 @@ span {
 .text-blue {
   color: #56509f;
 }
-.p-link {
-  padding: 0px 29px;
-}
 .activeLink {
   color: white;
   background-color: #fd6500;
   height: 100%;
+}
+.icon-header {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.icon-padding {
+  padding: 5px 20px 10px 20px;
+}
+.pointer {
+  cursor: pointer;
 }
 </style>

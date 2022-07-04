@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="debug container padd py-5"></div>
+    
   </div>
 </template>
 
@@ -14,4 +14,7 @@ export default {
 .padd {
   padding: 0px 250px;
 }
+// .bg-jumbo {
+//   background-image: url("../../public/images/");
+// }
 </style>

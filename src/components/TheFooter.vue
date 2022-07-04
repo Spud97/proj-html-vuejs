@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="bg-footer">
-      <div class="debug container padd pb-5">
+      <div class="container padd pb-5">
         <div class="row row-cols-4 pb-5">
           <div class="col px-0">
-            <div class="debug text-white pt-4 px-3">
+            <div class="text-white pt-4 px-3">
               <h4 class="pt-3">ABOUT US</h4>
               <hr />
               <p class="footer-text-color small-font pt-2">
@@ -19,14 +19,14 @@
             </div>
           </div>
           <div class="col px-0">
-            <div class="debug text-white pt-4 ps-3 pe-1">
+            <div class="text-white pt-4 ps-3 pe-2">
               <h4 class="pt-3">ARCHIVES</h4>
               <hr />
               <div class="pt-2">
                 <div
                   v-for="archive in archivesList"
                   :key="archive.id"
-                  class="text-center d-flex footer-text-color archive-box mb-1"
+                  class="text-center d-flex footer-text-color archive-box mb-1 pointer"
                 >
                   <span class="small-font bold"
                     >{{ archive.date.toUpperCase() }} ({{
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="col px-0">
-            <div class="debug text-white pt-4 px-3">
+            <div class="text-white pt-4 px-3">
               <h4 class="pt-3">OUR FEATURES</h4>
               <hr />
               <p class="footer-text-color small-font pt-2">
@@ -62,14 +62,14 @@
             </div>
           </div>
           <div class="col px-0">
-            <div class="debug text-white pt-4 px-3">
+            <div class="text-white pt-4 ps-3">
               <h4 class="pt-3">RECENT POSTS</h4>
               <hr />
               <div>
-                <div v-for="post in postsList" :key="post.title" class="d-flex">
-                  <img :src="`../../public/images${post.img}`" alt="post-thumbnails" />
-                  <div class="d-flex flex-column">
-                    <span class="medium-font">{{ post.title }}</span>
+                <div v-for="post in postsList" :key="post.title" class="d-flex py-2">
+                  <img :src="`../../images${post.img}`" alt="post-thumbnails" class="post-image" />
+                  <div class="d-flex flex-column ps-3">
+                    <span class="medium-font pb-2">{{ post.title }}</span>
                     <div class="d-flex">
                       <img
                         src="../../public/images/date_footer.png"
@@ -89,13 +89,14 @@
       </div>
     </div>
     <div>
-      <div class="debug container-fluid d-flex flex-column align-items-center p-3">
+      <div class="container-fluid d-flex flex-column align-items-center p-3 position-relative">
         <div class="d-flex justify-content-center align-items-center pt-2 pb-3 my-gap">
-          <div v-for="icona in iconsList" :key="icona.icon" class="d-flex justify-content-center align-items-center bg-orange p-2">
-            <img :src="`../../public/images${icona.icon}`" alt="icon">
+          <div v-for="icona in iconsList" :key="icona.icon" class="d-flex justify-content-center align-items-center bg-orange p-1">
+            <img :src="`../../images${icona.icon}`" alt="icon" class="icon-footer">
           </div>
         </div>
         <span class="small-font text-grey py-1">© Fable - Children Kindergarten WordPress Theme by QuanticalLabs</span>
+        <div id="back-up" class="d-flex justify-content-center align-items-center pointer"><i class="fa-solid fa-chevron-up text-white"></i></div>
       </div>
     </div>
   </div>
@@ -162,12 +163,12 @@ export default {
         {
           title: "Drawing and Painting Lessons",
           date: "October 03, 2014",
-          img: "/blog_10-150x150.jpg",
+          img: "/blog_09-150x150.jpg",
         },
         {
           title: "Fall Parents Meeting Day",
           date: "October 03, 2014",
-          img: "/blog_09-150x150.jpg",
+          img: "/blog_10-150x150.jpg",
         },
         {
           title: "Birthday in Kindergarten",
@@ -214,18 +215,23 @@ ul {
 #logo-footer {
   height: 3.7rem;
 }
+#back-up {
+  background-color: #9b9b9b;
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.5rem;
+  font-size: 0.9rem;
+  padding: 10px;
+}
 .small-font {
   font-size: 0.7rem;
 }
 .medium-font {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
 }
 .text-grey {
   color: rgb(168, 168, 168);
-}
-.debug {
-  border: 1px dashed red;
 }
 .padd {
   padding: 0px 250px;
@@ -249,6 +255,15 @@ ul {
 }
 .check-box {
   height: 0.8rem;
+}
+.icon-footer {
+  height: 1.8rem;
+}
+.post-image {
+  height: 65px;
+}
+.pointer {
+  cursor: pointer;
 }
 
 </style>
