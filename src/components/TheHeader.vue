@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="debug container padd d-flex justify-content-between">
+    <div class="container padd d-flex justify-content-between">
       <div>
         <img src="../../public/images/logo.png" alt="logo-header" />
       </div>
@@ -82,9 +82,6 @@ i {
 }
 span {
   font-size: 0.8rem;
-}
-.debug {
-  border: 1px dashed red;
 }
 .padd {
   padding: 0px 250px;
