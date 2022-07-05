@@ -25,7 +25,7 @@
                 />
               </div>
               <h5 class="title text-center pb-2">Morbi Etos</h5>
-              <p class="text-center text-grey small-font">
+              <p class="text-center text-secondary small-font">
                 Praesent interdum est gravida vehicula est node maecenas loareet
                 morbi a dosis luctus novum est praesent.
               </p>
@@ -43,7 +43,7 @@
                 />
               </div>
               <h5 class="title text-center pb-2">Congue Gravida</h5>
-              <p class="text-center text-grey small-font">
+              <p class="text-center text-secondary small-font">
                 Elipsis magna a terminal nulla elementum morbi elite forte
                 maecenas est magna etos interdum vitae est.
               </p>
@@ -61,7 +61,7 @@
                 />
               </div>
               <h5 class="title text-center pb-2">Maecenas Node</h5>
-              <p class="text-center text-grey small-font">
+              <p class="text-center text-secondary small-font">
                 Praesent interdum est gravida vehicula est node maecenas loareet
                 morbi a dosis luctus novum est praesent.
               </p>
@@ -79,7 +79,7 @@
                 />
               </div>
               <h5 class="title text-center pb-2">Praesent Morbi</h5>
-              <p class="text-center text-grey small-font">
+              <p class="text-center text-secondary small-font">
                 Elipsis magna a terminal nulla elementum morbi elite forte
                 maecenas est magna etos interdum vitae est.
               </p>
